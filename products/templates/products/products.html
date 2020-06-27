@@ -1,0 +1,29 @@
+{% extends 'products/base.html'%}
+
+
+{% block content%}
+
+
+
+    <div class="container">
+
+        <div class="row" style="margin:100px">
+ {% for i in products%}
+            <div class="card" style="width: 18rem; margin: 20px">
+              <img src="https://images.pexels.com/photos/753695/pexels-photo-753695.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                  <h5 class="card-title">{{i.price}}</h5>
+
+                <p class="card-text">{{i.desc}}</p>
+                  <h5 class="card-title">{{i.date}}</h5>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+{% endfor%}
+        </div>
+
+    </div>
+
+
+{% endblock%}
